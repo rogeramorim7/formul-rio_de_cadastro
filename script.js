@@ -1,4 +1,3 @@
-// Função para validar CPF
 function calcularDV(cpfSemDV) {
     let soma1 = 0;
     for (let i = 0; i < 9; i++) {
@@ -30,20 +29,17 @@ function verificarCpf(cpf) {
     return dvCalculado === dvRecebido;
 }
 
-// Função para validar E-mail
 function validarEmail(email) {
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     return regex.test(email);
 }
 
-// Função para verificar idade
 function verificarIdade(dataNascimento) {
     const nascimento = new Date(dataNascimento);
     const idade = new Date().getFullYear() - nascimento.getFullYear();
     return idade >= 18;
 }
 
-// Evento para submeter o formulário
 document.getElementById('formCadastro').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -78,3 +74,4 @@ document.getElementById('formCadastro').addEventListener('submit', function(even
     resultDiv.classList.remove('invalid');
     resultDiv.classList.add('valid');
 });
+
